@@ -20,25 +20,9 @@ function updatePhoneTotalPrice(newPhoneNumber){
     const phoneTotalElement = document.getElementById('phone-total');
     phoneTotalElement.innerText = phoneTotalPrice;
 }
-/*------------------subTotal Price Function Part Start-------------*/ 
-function getTextElementValueById(elementId){
-    const phoneTotalElement = document.getElementById(elementId);
-    const currentPhoneTotal= parseInt(phoneTotalElement.innerText);
-    return currentPhoneTotal;
-}
-/*------------------subTotal Price Function End Start-------------*/ 
-
-/*--------------------------------*/ 
-function calculateSubTotal(){
-    const currentPhoneTotal_Price=getTextElementValueById('phone-total')
-const currentCaseTotal_Price= getTextElementValueById('case-total')
-const currentSubTotal= currentPhoneTotal_Price + currentCaseTotal_Price;
-
-// get sub-total then set up
-const subTotalElement= document.getElementById('sub-total');
-subTotalElement.innerText= currentSubTotal;
-}
-/*--------------------------------*/ 
+/**
+ * this function transfer utilites-5-fun-1 js 
+ * */ 
 
 // for btn-phone-plus
 document.getElementById('btn-phone-plus').addEventListener('click', function () {
