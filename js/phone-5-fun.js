@@ -20,6 +20,14 @@ function updatePhoneTotalPrice(newPhoneNumber){
     const phoneTotalElement = document.getElementById('phone-total');
     phoneTotalElement.innerText = phoneTotalPrice;
 }
+/*------------------subTotal Price Function Part Start-------------*/ 
+function getTextElementValueById(elementId){
+    const phoneTotalElement = document.getElementById(elementId);
+    const currentPhoneTotal= parseInt(phoneTotalElement.innerText);
+    return currentPhoneTotal;
+}
+/*------------------subTotal Price Function End Start-------------*/ 
+
 
 
 // for btn-phone-plus
@@ -32,13 +40,11 @@ document.getElementById('btn-phone-plus').addEventListener('click', function () 
 
 /*------------------subTotal Price Start-------------*/ 
 // for phone
-const phoneTotalElement = document.getElementById('phone-total');
-const currentPhoneTotal= parseInt(phoneTotalElement.innerText);
+const currentPhoneTotal_Price=getTextElementValueById('phone-total')
 // for case
-const caseTotalElement = document.getElementById('case-total');
-const currentCaseTotal= parseInt(caseTotalElement.innerText)
+const currentCaseTotal_Price= getTextElementValueById('case-total')
 // for (phone + case)
-const currentSubTotal= currentPhoneTotal + currentCaseTotal;
+const currentSubTotal= currentPhoneTotal_Price + currentCaseTotal_Price;
 
 // get sub-total then set up
 const subTotalElement= document.getElementById('sub-total');
