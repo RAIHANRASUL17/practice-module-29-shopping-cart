@@ -15,5 +15,10 @@ const currentSubTotal= currentPhoneTotal_Price + currentCaseTotal_Price;
 // get sub-total then set up
 const subTotalElement= document.getElementById('sub-total');
 subTotalElement.innerText= currentSubTotal;
+
+// tax Amount
+const taxAmount= currentSubTotal*0.10
+const taxAmountElement= document.getElementById('tax-amount')
+taxAmountElement.innerText= taxAmount;
 }
 /*--------------------------------*/ 
