@@ -1,3 +1,5 @@
+console.log('phone 5 js file problem so much')
+
 // for btn-phone-plus & minus fuction
 function updatePhoneNumber(isIncrease) {
     const phoneNumberField = document.getElementById('phone-number-field');
@@ -18,6 +20,8 @@ function updatePhoneTotalPrice(newPhoneNumber){
     const phoneTotalElement = document.getElementById('phone-total');
     phoneTotalElement.innerText = phoneTotalPrice;
 }
+
+
 // for btn-phone-plus
 document.getElementById('btn-phone-plus').addEventListener('click', function () {
     /*call function btn-phone-plus & minus fuction*/
@@ -25,7 +29,25 @@ document.getElementById('btn-phone-plus').addEventListener('click', function () 
 
     /*call function updatePhoneTotalPrice*/
     updatePhoneTotalPrice(newPhoneNumber)
+
+/*------------------subTotal Price Start-------------*/ 
+// for phone
+const phoneTotalElement = document.getElementById('phone-total');
+const currentPhoneTotal= parseInt(phoneTotalElement.innerText);
+// for case
+const caseTotalElement = document.getElementById('case-total');
+const currentCaseTotal= parseInt(caseTotalElement.innerText)
+// for (phone + case)
+const currentSubTotal= currentPhoneTotal + currentCaseTotal;
+
+// get sub-total then set up
+const subTotalElement= document.getElementById('sub-total');
+subTotalElement.innerText= currentSubTotal;
+
+/*------------------subTotal Price End---------------*/ 
+
 })
+
 
 
 // for btn-phone-minus
